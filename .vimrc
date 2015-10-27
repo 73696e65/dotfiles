@@ -72,7 +72,7 @@ function ToggleHex()
     " set status
     let b:editHex=1
     " switch to hex editor
-    % ! xxd
+    % ! xxd -g 1 -c 16
   else
     " restore old options
     let &ft=b:oldft
