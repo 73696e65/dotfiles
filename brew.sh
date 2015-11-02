@@ -28,6 +28,7 @@ brew install socat
 brew install sqlmap
 brew install ssh-copy-id
 brew install tree
+brew install unrar
 brew install wget
 
 # Remove outdated versions from the cellar.
