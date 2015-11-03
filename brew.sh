@@ -16,6 +16,7 @@ brew upgrade --all
 
 brew install binwalk
 brew install bvi
+brew install coreutils
 brew install fcrackzip
 brew install hashpump
 brew install hydra
