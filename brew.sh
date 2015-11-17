@@ -23,13 +23,16 @@ brew install hydra
 brew install john
 brew install nmap
 brew install pngcheck
+brew install pwgen
 brew install qemu
 brew install rtorrent
 brew install socat
+brew install sqlitebrowser
 brew install sqlmap
 brew install ssh-copy-id
 brew install tree
 brew install unrar
+brew install vbindiff
 brew install wget
 
 # Remove outdated versions from the cellar.
