@@ -17,11 +17,14 @@ brew upgrade --all
 brew install binwalk
 brew install bvi
 brew install coreutils
+brew install exiftool
 brew install fcrackzip
 brew install hashpump
 brew install hydra
 brew install john
 brew install nmap
+brew install npm
+brew install pillow
 brew install pngcheck
 brew install pwgen
 brew install qemu

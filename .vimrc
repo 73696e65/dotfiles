@@ -43,6 +43,9 @@ noremap E D
 noremap l n
 noremap L N
 
+" Insert datetime
+nnoremap <F5>i=======================<Enter><C-R>=strftime('%d.%m.%Y %H:%M %A')<CR><Enter>=======================<Esc>o<Esc>
+
 " Remove whitespaces after last printable character
 nnoremap <F6> ::%s/\s\+$//<Enter>
 
