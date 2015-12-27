@@ -17,6 +17,9 @@ set showmode                      " Display the mode you are in.
 set ruler                         " Show cursor position.
 set number                        " Show line numbers.
 
+set statusline+=%F                " See full path of the current file
+set laststatus=2                  " Displaying status line always
+
 set wildmenu                      " Enhanced command line completion.
 set wildmode=list:longest         " Complete menus as in bash.
 
@@ -44,7 +47,7 @@ noremap l n
 noremap L N
 
 " Insert datetime
-nnoremap <F5>i=======================<Enter><C-R>=strftime('%d.%m.%Y %H:%M %A')<CR><Enter>=======================<Esc>o<Esc>
+nnoremap <F5> i=======================<Enter><C-R>=strftime('%d.%m.%Y %H:%M %A')<CR><Enter>=======================<Esc>o<Esc>
 
 " Remove whitespaces after last printable character
 nnoremap <F6> ::%s/\s\+$//<Enter>

@@ -17,6 +17,7 @@ brew upgrade --all
 brew install binwalk
 brew install bvi
 brew install coreutils
+brew install dpkg
 brew install exiftool
 brew install fcrackzip
 brew install hashpump
