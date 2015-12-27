@@ -8,6 +8,10 @@ set t_Co=256                      " To enable 256 colors
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on filetype detection.
 
+set expandtab                     " Expand tab to spaces
+set shiftwidth=2                  " Auto indent by 2 spaces
+set softtabstop=2                 " Set Tab to 2 spaces too
+
 set title                         " Set terminal's title.
 set background=dark
 
