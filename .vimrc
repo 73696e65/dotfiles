@@ -6,7 +6,7 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set t_Co=256                      " To enable 256 colors
 
 syntax enable                     " Turn on syntax highlighting.
-"filetype plugin indent on         " Turn on filetype detection.
+filetype plugin indent on         " Turn on filetype detection.
 
 set title                         " Set terminal's title.
 set background=dark
@@ -16,9 +16,6 @@ set showmode                      " Display the mode you are in.
 
 set ruler                         " Show cursor position.
 set number                        " Show line numbers.
-
-set statusline+=%F                " See full path of the current file
-set laststatus=2                  " Displaying status line always
 
 set wildmenu                      " Enhanced command line completion.
 set wildmode=list:longest         " Complete menus as in bash.
@@ -96,3 +93,8 @@ function ToggleHex()
 endfunction
 
 colorscheme slate
+
+" Set StatusLine and overwrite the color from colorscheme:
+set statusline+=%F                " See full path of the current file
+set laststatus=2                  " Displaying status line always
+highlight StatusLine ctermbg=black ctermfg=red
