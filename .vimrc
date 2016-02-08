@@ -99,6 +99,6 @@ endfunction
 colorscheme slate
 
 " Set StatusLine and overwrite the color from colorscheme:
-set statusline+=%F                " See full path of the current file
+" set statusline+=%F                " See full path of the current file
 set laststatus=2                  " Displaying status line always
 highlight StatusLine ctermbg=black ctermfg=red
