@@ -27,9 +27,11 @@ brew install nmap
 brew install npm
 brew install pillow
 brew install pngcheck
+brew install pyenv-virtualenv
 brew install pwgen
 brew install qemu
 brew install rtorrent
+brew install scapy
 brew install socat
 brew install sqlitebrowser
 brew install sqlmap

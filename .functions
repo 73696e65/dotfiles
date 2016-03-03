@@ -224,3 +224,14 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+
+# Simple Zone transfer script
+function zone_transfer_test() {
+  # $1 is the first argument given after the bash script # Check if argument was given, if not, print usage
+  if [ -z "$1" ]; then
+    echo "[*] Usage: $FUNCNAME <domain name> "
+    return 0
+  fi
+  host -t ns $1 | cut -d" " -f 4 | xargs -I NS -P 128 host -l $1 NS
+}
