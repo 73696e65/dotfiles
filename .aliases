@@ -160,4 +160,4 @@ alias pldump='plutil -convert xml1 -o -'
 alias watch_torrent='pirate-get -C "peerflix %s --vlc"'
 
 # find symbol in the c/cpp sources
-alias aa='find . -name ".*c" -or -iname "*.cpp" -print | xargs grep'
+alias aa='find . -name "*.c" -or -iname "*.cpp" -print | xargs grep'
