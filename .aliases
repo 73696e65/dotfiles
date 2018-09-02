@@ -147,8 +147,11 @@ alias reload="exec $SHELL -l"
 # timeout command
 alias timeout="gtimeout"
 
-# cryptocurrency market capital
+# cryptocurrency market capital in terminal
 alias cap="curl -A curl http://rate.sx"
+
+# weather in terminal 
+alias wtr="curl -A curl -H 'Accept-Language: sk' http://wttr.in"
 
 # ssh to local machine, trying to change the directory same as cwd
 alias L='ssh -Y -t kali64 -- "cd ${PWD#$HOME/}; bash --login" 2> /dev/null'
