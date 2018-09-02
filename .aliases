@@ -9,7 +9,8 @@ alias -- -="cd -"
 # Shortcuts
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="python3 -m bpython -q -i"
+# alias p="python3 -m bpython -q -i"
+alias p="python3 -m bpython -q -i ~/bootstrap.py"
 alias g="git"
 alias h="history"
 alias j="jobs"
@@ -148,10 +149,10 @@ alias reload="exec $SHELL -l"
 alias timeout="gtimeout"
 
 # cryptocurrency market capital in terminal
-alias cap="curl -A curl http://rate.sx"
+alias cap="curl -s -A curl http://rate.sx | grep -vi -e 'New feature' -e 'Follow'"
 
-# weather in terminal 
-alias wtr="curl -A curl -H 'Accept-Language: sk' http://wttr.in"
+# weather in terminal
+alias wtr="curl -s -A curl -H 'Accept-Language: sk' http://wttr.in | grep -vi -e 'New feature' -e 'Follow'"
 
 # ssh to local machine, trying to change the directory same as cwd
 alias L='ssh -Y -t kali64 -- "cd ${PWD#$HOME/}; bash --login" 2> /dev/null'
@@ -163,4 +164,6 @@ alias pldump='plutil -convert xml1 -o -'
 alias watch_torrent='pirate-get -C "peerflix %s --vlc"'
 
 # find symbol in the c/cpp sources
-alias aa='find . -name "*.c" -or -iname "*.cpp" | xargs grep'
+alias aa='find . -name "*.c" -or -iname "*.cpp" | xargs grep -n --color=auto'
+
+alias a='ls -la'
