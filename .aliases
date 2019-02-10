@@ -166,4 +166,7 @@ alias watch_torrent='pirate-get -C "peerflix %s --vlc"'
 # find symbol in the c/cpp sources
 alias aa='find . -name "*.c" -or -iname "*.cpp" | xargs grep -n --color=auto'
 
+# https://www.wisdomandwonder.com/link/7784/making-irssi-refresh-work-with-tmux
+alias irssi='TERM=screen irssi'
+
 alias a='ls -la'
