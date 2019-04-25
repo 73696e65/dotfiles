@@ -53,50 +53,7 @@ nnoremap <F5> i=======================<Enter><C-R>=strftime('%d.%m.%Y %H:%M %A')
 " Remove whitespaces after last printable character
 nnoremap <F6> ::%s/\s\+$//<Enter>
 
-" Binary editing, source http://vim.wikia.com/wiki/Improved_hex_editing
-command -bar Hexmode call ToggleHex()
-nnoremap <C-H> :Hexmode<CR>
-
-" helper function to toggle hex mode
-function ToggleHex()
-  " hex mode should be considered a read-only operation
-  " save values for modified and read-only for restoration later,
-  " and clear the read-only flag for now
-  let l:modified=&mod
-  let l:oldreadonly=&readonly
-  let &readonly=0
-  let l:oldmodifiable=&modifiable
-  let &modifiable=1
-  if !exists("b:editHex") || !b:editHex
-    " save old options
-    let b:oldft=&ft
-    let b:oldbin=&bin
-    " set new options
-    setlocal binary " make sure it overrides any textwidth, etc.
-    silent :e " this will reload the file without trickeries
-              "(DOS line endings will be shown entirely )
-    let &ft="xxd"
-    " set status
-    let b:editHex=1
-    " switch to hex editor
-    % ! xxd -g 1 -c 16
-  else
-    " restore old options
-    let &ft=b:oldft
-    if !b:oldbin
-    endif
-    " set status
-    let b:editHex=0
-    " return to normal editing
-    % ! xxd -r
-  endif
-  " restore values for modified and read only state
-  let &mod=l:modified
-  let &readonly=l:oldreadonly
-  let &modifiable=l:oldmodifiable
-endfunction
-
-colorscheme slate
+colorscheme peachpuff
 
 " Set StatusLine and overwrite the color from colorscheme:
 " set statusline+=%F                " See full path of the current file
